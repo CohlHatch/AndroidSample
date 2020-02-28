@@ -13,15 +13,15 @@ import kotlinx.android.synthetic.main.content_main.*
 class MainActivity : AppCompatActivity() {
 
     fun convertCurrency(view: View) {
-        if (dollar_hint.text.isNotEmpty()) {
+        if (editText.text.isNotEmpty()) {
 
-            val dollarValue = dollar_hint.text.toString().toFloat()
+            val dollarValue = editText.text.toString().toFloat()
 
             val euroValue = dollarValue * 0.85f
 
-            textView.text = euroValue.toString()
+            textview_first.text = euroValue.toString()
         } else {
-            textView.text = getString(R.string.no_value_string)
+            textview_first.text = getString(R.string.no_value_string)
         }
     }
 
